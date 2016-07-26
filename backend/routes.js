@@ -17,7 +17,8 @@ var Schema = mongoose.Schema;
 var AlertSchema = new Schema({
   name: String,
   lat: String,
-  lng: String
+  lng: String,
+  timestamp: String
 });
 
 // Mongoose Model definition
