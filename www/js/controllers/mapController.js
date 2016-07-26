@@ -80,6 +80,7 @@ angular.module('starter').controller('MapController',
         $scope.newLocation = new Location();
         $scope.newLocation.lat = locationEvent.leafletEvent.latlng.lat;
         $scope.newLocation.lng = locationEvent.leafletEvent.latlng.lng;
+        $scope.newLocation.timestamp = new Date();
         $scope.modal.show();
       });
 
