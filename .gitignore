@@ -3,5 +3,8 @@
 
 node_modules/
 platforms/
+resources/
 plugins/
 .ideea
+config.xml
+.gitignore
