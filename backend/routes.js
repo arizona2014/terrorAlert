@@ -18,6 +18,7 @@ var AlertSchema = new Schema({
   name: String,
   lat: String,
   lng: String,
+  stare: String,
   timestamp: String
 });
 
@@ -38,6 +39,7 @@ function getAlerts(req, res, next) {
 
 function postAlert(req, res, next) {
   var alert = new Alert(req.body);
+  
   alert.save(function(err){
     if(err){
       return next(err);
