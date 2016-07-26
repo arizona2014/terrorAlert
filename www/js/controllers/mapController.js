@@ -80,11 +80,11 @@ angular.module('starter').controller('MapController',
         $scope.newLocation = new Location();
         $scope.newLocation.lat = locationEvent.leafletEvent.latlng.lat;
         $scope.newLocation.lng = locationEvent.leafletEvent.latlng.lng;
-        $scope.newLocation.timestamp = new Date();
+        $scope.newLocation.timestamp = new Date();        
         $scope.modal.show();
       });
 
-      $scope.saveLocation = function() {
+      $scope.saveLocation = function() {        
         AlertsService.saveAlert($scope.newLocation);
         $scope.modal.hide();
         $scope.goTo(LocationsService.savedLocations.length - 1);
