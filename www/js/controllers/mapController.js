@@ -111,8 +111,8 @@ angular.module('starter').controller('MapController',
 
             var msg = "Current location";
             for(i=0;i<$scope.alerts.data.length;i++){
-
-              if( Math.round(L.latLng([ $scope.alerts.data[i].lat, $scope.alerts.data[i].lng]).distanceTo([position.coords.latitude, position.coords.longitude]) / 1000) <= 1 &&  $scope.alerts.data[i].stare === "active"){
+              var distance = Math.round(L.latLng([ $scope.alerts.data[i].lat, $scope.alerts.data[i].lng]).distanceTo([position.coords.latitude, position.coords.longitude]) / 1000);
+              if( distance <= 2 &&  $scope.alerts.data[i].stare === "active"){
                 msg += " - alert present here.";
               }
 
@@ -150,7 +150,8 @@ angular.module('starter').controller('MapController',
 
         var msg = location.name;
         for(i=0;i<$scope.alerts.data.length;i++){
-          if( Math.round(L.latLng([ $scope.alerts.data[i].lat, $scope.alerts.data[i].lng]).distanceTo([location.lat, location.lng]) / 1000) <= 1  &&  $scope.alerts.data[i].stare === "active"){
+          var distance = Math.round(L.latLng([ $scope.alerts.data[i].lat, $scope.alerts.data[i].lng]).distanceTo([location.lat, location.lng]) / 1000);
+          if( distance <= 2  &&  $scope.alerts.data[i].stare === "active"){
             msg += " - alert present here.";
           }
         }
@@ -186,7 +187,8 @@ angular.module('starter').controller('MapController',
             $scope.map.center.zoom = 15;
 
             for(i=0;i<$scope.alerts.data.length;i++){
-              if( Math.round(L.latLng([ $scope.alerts.data[i].lat, $scope.alerts.data[i].lng]).distanceTo([position.coords.latitude, position.coords.longitude]) / 1000) <= 10  &&  $scope.alerts.data[i].stare === "active"){
+              var distance = Math.round(L.latLng([ $scope.alerts.data[i].lat, $scope.alerts.data[i].lng]).distanceTo([position.coords.latitude, position.coords.longitude]) / 1000);              
+              if( distance <= 2 &&  $scope.alerts.data[i].stare === "active"){
                 msg += " - alert present here.";
               }
             }
