@@ -7,24 +7,23 @@ angular.module('starter').factory('AlertsService', [ '$http', function($http) {
           var self = this;
           $http.get(server)
           .success(function(data, status, headers, config) {
-              console.log('data ok');
               self.data = data;
           })
           .error(function(data, status, headers, config) {
-              alert("data ko");
+              console.log("data ko");
           });
       },
-      saveAlert: function(alert){          
+      saveAlert: function(alert){
           $http({
             url: server,
             method: "POST",
             data: alert
           })
           .success(function(data, status, headers, config) {
-              console.log('data ok');              
+              console.log('data ok');
           })
           .error(function(data, status, headers, config) {
-              alert("data ko");
+              console.log("data ko");
           });
       }
   }
