@@ -1,7 +1,7 @@
 {
   "name": "terroralert",
   "version": "1.1.1",
-  "description": "terrorAlert: An Ionic project",
+  "description": "TerrorAlert: An Ionic project for sharing terrorist alerts",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
