@@ -11,7 +11,6 @@ mongoose.connect('mongodb://localhost/terrorAlerts', function (error) {
   }
 });
 
-
 // Mongoose Schema definition
 var Schema = mongoose.Schema;
 var AlertSchema = new Schema({
