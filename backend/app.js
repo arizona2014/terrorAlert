@@ -11,7 +11,7 @@ var four0four = require('./utils/404')();
 var _ = require('../node_modules/lodash');
 var environment = process.env.NODE_ENV;
 
-// Add headers
+// Add CORS headers
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
